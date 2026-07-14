@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Robotics projects of Abhinash Kumar.">
+<title>Projects | Abhinash Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav container" aria-label="Primary navigation">
+<a class="brand" href="index.html">Abhinash Kumar</a>
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="experience.html">Experience</a>
+<a class="active" href="projects.html">Projects</a>
+</div>
+</nav>
+</header>
+<main class="page container">
+<!-- Page heading -->
+<section class="page-heading">
+<p class="eyebrow">Selected work</p>
+<h1>Projects</h1>
+<p>Built on real hardware. Benchmarked. Not just simulated.</p>
+</section>
+<!-- BlueROV2 --> <article class="project-card">
+<div class="project-copy">
+<p class="project-number">01</p>
+<h2>BlueROV2 Fault-Tolerant Control</h2>
+<div class="tags">
+<span>ROS2</span>
+<span>C++17</span>
+<span>Stonefish</span>
+<span>Fault-Tolerant Control</span>
+<span>6-DOF</span>
+</div>
+<p class="project-summary">Passive fault-tolerant control of an underwater robot surviving 4-thruster simultaneous failure.</p>
+<p class="small-label">System Architecture</p>
+<!-- /* Replace with: assets/images/bluerov-architecture.jpg */ -->
+<img class="media-image diagram blue-rov-architecture" src="assets/images/bluerov-architecture.jpg" alt="BlueROV2 five-node ROS2 system architecture">
+<div class="placeholder diagram">5-node ROS2 architecture diagram  -  trajectory / controller / state estimator / thruster allocator / data logger<small>700 x 400px</small>
+</div>
+<div class="stat-grid">
+<div>
+<strong>0.156m</strong>
+<span>Mean tracking error under fault (I-FTSMC)</span>
+</div>
+<div>
+<strong>4 thrusters</strong>
+<span>Simultaneous failure survived</span>
+</div>
+<div>
+<strong>PID</strong>
+<span>Diverged completely under same conditions</span>
+</div>
+</div>
+<blockquote>I-FTSMC with PI-Sig sliding surface held sub-0.3m tolerance where PID failed completely.</blockquote>
+<a class="button secondary" href="https://github.com/AbhinashKumar-kota/Passive-Fault-Tolerant-Control-UUV" target="_blank" rel="noopener">View on GitHub <span> -> </span>
+</a>
+</div>
+<div class="project-media">
+<!-- /* Replace with: assets/images/tracking-comparison.jpg */ -->
+<img class="media-image technical-figure result-image blue-rov-result" src="assets/images/tracking-comparison.jpg" alt="Trajectory tracking comparison of I-FTSMC, FTSMC, and PID">
+<div class="placeholder result-image">Trajectory tracking comparison  -  I-FTSMC vs FTSMC vs PID<small>600 x 350px</small>
+</div>
+<!-- BlueROV2 Stonefish simulation video -->
+<video class="project-video landscape blue-rov-video" controls preload="metadata" playsinline>
+<source src="assets/videos/CDC_Bluerov2.mp4" type="video/mp4">
+Your browser does not support embedded video.
+</video>
+</div>
+</article>
+<!-- BMO Swarm --> <article class="project-card reverse">
+<div class="project-copy">
+<p class="project-number">02</p>
+<h2>BMO Swarm (Crazyflie)</h2>
+<div class="tags">
+<span>ROS2</span>
+<span>Gazebo Harmonic</span>
+<span>C++</span>
+<span>Crazyflie 2.1+</span>
+<span>Firmware</span>
+<span>Swarm</span>
+</div>
+<p class="project-summary">3-agent autonomous light-source localization on physical Crazyflie drones  -  no GPS, no pre-programmed coordinates.</p>
+<!-- BMO hardware-run video -->
+<video class="media-video bmo-video-slot" controls preload="metadata" playsinline>
+<source src="assets/videos/bmo_run.mp4" type="video/mp4">
+Your browser does not support embedded video.
+</video>
+<ul class="highlights">
+<li>
+<strong>Firmware modified</strong>  -  BH1750 I2C sensor driver extended at firmware level.</li>
+<li>
+<strong>Sim-to-real validated</strong>  -  Gazebo plugin with inverse-square photometry + Gaussian noise before hardware runs.</li>
+<li>
+<strong>All 3 agents converged</strong> on physical hardware.</li>
+</ul>
+<a class="button secondary" href="https://github.com/AbhinashKumar-kota/bmo_ws" target="_blank" rel="noopener">View on GitHub <span> -> </span>
+</a>
+</div>
+<div class="project-media">
+<!-- /* Replace with: assets/images/bmo-gazebo.jpg */ -->
+<img class="media-image technical-figure result-image bmo-workflow" src="assets/images/bmo-gazebo.jpg" alt="BMO Swarm decision workflow">
+<div class="placeholder result-image">Gazebo simulation  -  agents converging on light source<small>600 x 350px</small>
+</div>
+</div>
+</article>
+<!-- Active FTC --> <article class="project-card">
+<div class="project-copy">
+<p class="project-number">03</p>
+<h2>Active FTC  -  Mecanum Robot <span class="status">Paper in progress</span>
+</h2>
+<div class="tags">
+<span>Python</span>
+<span>ROS2</span>
+<span>DMD</span>
+<span>Koopman Operator</span>
+<span>Raspberry Pi</span>
+<span>Arduino Mega</span>
+</div>
+<p class="project-summary">Data-driven fault estimation on a mecanum robot using DMD/Koopman  -  co-authored with IIT Mandi under ANRF grant CRG/2023/003333.</p>
+<ul class="highlights">
+<li>Applied Dynamic Mode Decomposition via Koopman operator to build a linear model directly from hardware data.</li>
+<li>Luenberger observer estimates per-motor fault effectiveness in real time.</li>
+<li>Fault effectiveness computed via direct closed-form algebraic derivation.</li>
+</ul>
+</div>
+<div class="project-media">
+<!-- DMD fault-observer architecture -->
+<img class="media-image technical-figure landscape" src="assets/images/DMD-architecture.jpg" alt="DMD-based fault observer architecture for the mecanum robot">
+<div class="placeholder landscape">DMD fault-observer architecture<small>1650 x 1275px</small>
+</div>
+<!-- DMD data-driven fault-identification workflow -->
+<img class="media-image technical-figure landscape" src="assets/images/DMD-data-driven.jpg" alt="Data-driven DMD fault identification workflow">
+<div class="placeholder landscape">DMD data-driven fault identification workflow<small>1650 x 1275px</small>
+</div>
+</div>
+</article>
+<!-- ArUco --> <article class="project-card compact reverse">
+<div class="project-copy">
+<p class="project-number">04</p>
+<h2>ArUco Visual Servo</h2>
+<div class="tags">
+<span>OpenCV</span>
+<span>Raspberry Pi</span>
+<span>Arduino</span>
+<span>Computer Vision</span>
+</div>
+<p class="project-summary">Camera-based omnidirectional robot control using ArUco marker detection at 10 FPS with ~90% detection accuracy.</p>
+</div>
+<div class="project-media">
+<!-- Omnidirectional robot kinematics -->
+<img class="media-image technical-figure landscape" src="assets/images/omni-wheeled.jpg" alt="Omnidirectional robot kinematics diagram">
+<div class="placeholder landscape">Omnidirectional robot kinematics<small>1650 x 1275px</small>
+</div>
+</div>
+</article>
+</main>
+<footer>(c) 2026 Abhinash Kumar</footer>
+<script src="script.js">
+</script>
+</body>
+</html>

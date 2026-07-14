@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Robotics experience of Abhinash Kumar.">
+<title>Experience | Abhinash Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav container" aria-label="Primary navigation">
+<a class="brand" href="index.html">Abhinash Kumar</a>
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a class="active" href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+</div>
+</nav>
+</header>
+<main class="page container">
+<!-- Page heading -->
+<section class="page-heading">
+<p class="eyebrow">Field notes</p>
+<h1>Experience</h1>
+<p>Real hardware. Real outcomes. Real ownership.</p>
+</section>
+<!-- Origin Autonomy -->
+<article class="experience-card">
+<div class="experience-copy">
+<p class="company">Origin Autonomy <span>(10xConstruction.ai)</span>
+</p>
+<h2>Robotics Deployment Engineer</h2>
+<p class="meta">September 2025  -  March 2026  -  Bengaluru, India</p>
+<div class="tags">
+<span>ROS2</span>
+<span>Jetson Orin</span>
+<span>URScript</span>
+<span>RTDE</span>
+<span>Isaac Sim</span>
+<span>Python</span>
+</div>
+<section>
+<h3>The Problem</h3>
+<p>A mobile manipulator performing autonomous drywall finishing needed to match human-grade output quality before the product could be sold to US customers. Spray anomaly rates were high, sanding rework was at 80%, and data collection was entirely manual.</p>
+</section>
+<section>
+<h3>What I Owned</h3>
+<ul>
+<li>Weekly DevQA -> QA validation  -  I decided whether the robot was ready for hardware release each week.</li>
+<li>Designed and ran full DOE cycles for spray and sanding quality  -  hypothesis, execution, data analysis, follow-on scoping.</li>
+<li>Wrote URScript + RTDE force control pipeline from scratch when the software team was a bottleneck.</li>
+<li>Built a 500Hz joint-state logging pipeline with a 10Hz synchronized camera feed, replacing manual data capture.</li>
+<li>Built an internal experiment organiser and analysis web app at the company hackathon, adopted by the full team.</li>
+</ul>
+<aside class="trait-callout">
+<p class="callout-label"></p>
+<p>To keep deployment work moving, I reduced reliance on upstream software dependencies by working directly across the stack. I implemented the URScript/RTDE control path and built lightweight internal tooling to automate failing workflows, allowing experiments and validation to continue without waiting for additional software changes.</p>
+<p class="callout-note">The lesson I carried out of Origin: output is what you produce. Outcome is what changes. I learned to chase the second one.</p>
+</aside>
+</section>
+<section class="results">
+<h3>Results</h3>
+<ul>
+<li>Spray quality improved by 65% (ridge-formation anomaly reduction).</li>
+<li>Sanding rework reduced from 80%  ->  20%.</li>
+<li>Data pipeline replaced hours of manual work per experiment.</li>
+</ul>
+</section>
+</div>
+<div class="media-grid origin-media-grid">
+<div class="origin-media-gallery" aria-label="Origin Autonomy project media">
+<figure class="origin-media-slide">
+<img class="media-image origin-slide-image" src="assets/images/test-area.png" alt="Origin robot test area">
+<figcaption>Autonomous drywall-finishing test area</figcaption>
+</figure>
+<figure class="origin-media-slide">
+<img class="media-image origin-slide-image origin-setup-image" src="assets/images/exp-setup.jpg" alt="Robot setup for drywall-finishing experiments">
+<figcaption>Hardware experimentation setup</figcaption>
+</figure>
+<figure class="origin-media-slide">
+<video class="media-video origin-slide-video" controls preload="metadata" playsinline>
+<source src="assets/videos/panda.mp4" type="video/mp4">
+Your browser does not support embedded video.
+</video>
+<figcaption>Experiment organiser and analysis web app</figcaption>
+</figure>
+<figure class="origin-media-slide">
+<img class="media-image technical-figure origin-slide-image" src="assets/images/origin-crown-threshold.jpg" alt="Positive and negative crown threshold analysis">
+<figcaption>Crown threshold analysis for sanding outcomes</figcaption>
+</figure>
+<figure class="origin-media-slide">
+<img class="media-image technical-figure origin-slide-image" src="assets/images/origin-diagnostic-matrix.jpg" alt="Experimental sample diagnostic matrix">
+<figcaption>Experimental diagnostic matrix</figcaption>
+</figure>
+</div>
+<p class="gallery-hint">Scroll horizontally to view all Origin media →</p>
+</div>
+</article>
+<!-- IIT Mandi -->
+<article class="experience-card">
+<div class="experience-copy">
+<p class="company">Indian Institute of Technology Mandi</p>
+<h2>Research Intern  -  MiC Lab</h2>
+<p class="meta">May 2025  -  July 2025  -  Mandi, HP<br>Under Dr. Tushar Jain</p>
+<div class="tags">
+<span>Crazyflie 2.1+</span>
+<span>ROS2</span>
+<span>PyBullet</span>
+<span>cflib</span>
+<span>Python</span>
+<span>Consensus Control</span>
+</div>
+<section>
+<h3>The Problem</h3>
+<p>Build consensus-based time-varying formation tracking on physical Crazyflie drones. No prior implementation existed in the lab. Mid-project, GPS-denied inter-agent localization failed due to Flowdeck optical drift under low light  -  a problem not in the original scope.</p>
+</section>
+<section>
+<h3>What I Decided</h3>
+<p>I diagnosed the Flowdeck light dependency, engineered a coordinate conversion layer using known initial positions to synthesize relative pose sharing across agents  -  no external infrastructure required. I made the call to solve it rather than escalate.</p>
+<aside class="trait-callout">
+<p class="callout-label">Exposure Without a Lab</p>
+<p>There was no senior to ask. No lab documentation. No one who had done this before. I set up the hardware, read the firmware, diagnosed the failure, and built the fix  -  entirely on my own. This is what I mean when I say I create my own exposure: I don't wait for the right environment. I build one.</p>
+</aside>
+</section>
+<section class="results">
+<h3>Results</h3>
+<ul>
+<li>90% formation success rate (18/20 runs) on physical hardware.</li>
+<li>First-ever Crazyflie implementation in the lab.</li>
+</ul>
+</section>
+</div>
+<div class="media-grid">
+<!-- IIT Mandi formation-tracking image -->
+<img class="media-image technical-figure formation-image" src="assets/images/formation-tracking.jpg" alt="Formation tracking drone positions from overhead">
+<div class="placeholder portraitish">Formation tracking  -  drone positions overhead<small>400 x 300px</small>
+</div>
+<!-- IIT Mandi formation-tracking video -->
+<video class="media-video" controls preload="metadata" playsinline>
+<source src="assets/videos/formation-tracking.mp4" type="video/mp4">
+Your browser does not support embedded video.
+</video>
+</div>
+</article>
+<!-- Education -->
+<section class="education card">
+<p class="eyebrow">Education</p>
+<h2>B.Tech  -  Electrical Engineering</h2>
+<div class="education-info">
+<p>
+<strong>RGUKT Nuzvid</strong>
+<br>2022  -  2026</p>
+<p>
+<strong>GPA</strong>
+<br>8.27 / 10</p>
+<p>
+<strong>Coursework</strong>
+<br>Control Systems  -  Embedded Systems  -  Signals &amp; Systems  -  Digital Electronics  -  AI/ML  -  OOP with C++</p>
+</div>
+</section>
+</main>
+<footer>(c) 2026 Abhinash Kumar</footer>
+<script src="script.js">
+</script>
+</body>
+</html>
